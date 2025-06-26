@@ -1,0 +1,37 @@
+{
+  "name": "document-service",
+  "version": "1.0.0",
+  "description": "A simple CAP project.",
+  "repository": "<Add your repository here>",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@sap-cloud-sdk/connectivity": "^4.0.2",
+    "@sap-cloud-sdk/http-client": "^4.0.2",
+    "@sap/cds": "^8",
+    "@sap/xssec": "^4",
+    "axios": "^1.9.0",
+    "express": "^4",
+    "form-data": "^4.0.3",
+    "jstoxml": "^7.0.1"
+  },
+  "devDependencies": {
+    "@cap-js/cds-types": "^0.10.0",
+    "@cap-js/sqlite": "^1",
+    "@sap/cds-dk": "^8"
+  },
+  "scripts": {
+    "start": "cds-serve"
+  },
+  "cds": {
+    "requires": {
+      "destinations": true,
+      "externalApi": {
+        "kind": "rest",
+        "credentials": {
+          "destination": "DIE-service"
+        }
+      }
+    }
+  }
+}
