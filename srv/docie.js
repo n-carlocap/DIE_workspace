@@ -340,9 +340,9 @@ module.exports = cds.service.impl(async (srv) => {
             header: true,
             indent: '  '
         }
-        console.log(toXML(content, xmlOptions))
-        // let sAriba = await sendToAriba(toXML(content, xmlOptions))
-                // console.log(sAriba);
+        // console.log(toXML(content, xmlOptions))
+        let sAriba = await sendToAriba(toXML(content, xmlOptions))
+        console.log(sAriba);
     })
 
     async function sendToAriba(sXML) {
